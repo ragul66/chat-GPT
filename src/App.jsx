@@ -26,6 +26,7 @@ function App() {
 
     // placeholder for AI response
     setMessages(prev => [...prev, { role: 'assistant', content: '' }])
+    
 
     try {
       const response = await fetch(API_URL, {
