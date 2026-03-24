@@ -1,8 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import './App.css'
 
-const API_KEY = "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"
-const API_URL = "/api/nvidia/v1/chat/completions"
+const API_URL = "/api/chat"
 const MODEL = "qwen/qwen3.5-122b-a10b"
 
 function App() {
@@ -32,7 +31,6 @@ function App() {
       const response = await fetch(API_URL, {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${API_KEY}`,
           'Content-Type': 'application/json',
           'Accept': 'text/event-stream',
         },
